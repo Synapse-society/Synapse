@@ -20,8 +20,7 @@
     --color-bg: #062155;
     --color-bg1: #345694;
     --color-bg2: #7790bc;
-
-    --container-width-lg: 76%;  /*80%*/
+    --container-width-lg: 80%;
     --container-width-md: 90%;
     --container-width-sm: 94%;
 
@@ -182,8 +181,7 @@ main {
     left: calc(50% + 230px);
     transform: translate(-50%, -50%);
 }
-.fog-2
-{ 
+.fog-2 { 
     position: absolute;
     z-index: 4;
     top: calc(50% + 95px);
@@ -192,7 +190,7 @@ main {
     transform: translate(-50%, -50%);
 }   
 
-.mountain-9{
+.mountain-9 {
     position: absolute;
     z-index: 5;
     top: calc(50% + 119px); 
