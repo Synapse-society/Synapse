@@ -1,3 +1,5 @@
+
+// --------------- Body ---------------
 const parallax_el = document.querySelectorAll(".parallax");
 
 let xValue = 0, 
@@ -26,3 +28,4 @@ window.addEventListener("mousemove", (e)=> {
                 yValue * speedy}px))`;
     });
 });
+
