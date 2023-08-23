@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     border: 0;
@@ -9,13 +9,13 @@
 }
 
 :root {
-    --color-primary: #278AB0;
-    --color-success: #1DC690;
+    --color-primary: #278ab0;
+    --color-success: #1dc690;
     --color-danger: #e53119;
-    --color-warning:rgb(245, 233, 6)0;
+    --color-warning: rgb(245, 233, 6);
     --color-danger-variant: #621f07;
     --color-white: #fff;
-    --color-light: #EAEAE0;
+    --color-light: #eaeae0;
     --color-black: #000;
     --color-bg: #062155;
     --color-bg1: #345694;
@@ -27,17 +27,10 @@
     --transition: all 400ms ease;
 }
 
-body {
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.7;
-    color: var(--color-white);
-}
-
-.Synapse-logo{
+.Synapse-logo {
     width: 100px;
 }
-::selection
-{
+::selection {
     background-color: #0b372dbb;
 }
 .container {
@@ -45,13 +38,10 @@ body {
     margin: 0 auto;
 }
 
-section {
-    padding: 6rem 0;
-}
-
-section h2 {
-    text-align: center;
-    margin-bottom: 4rem;
+body {
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.7;
+    color: var(--color-white);
 }
 
 h1,
@@ -75,7 +65,7 @@ h3 {
 }
 
 h4 {
-font-size: 1.3rem;
+    font-size: 1.3rem;
 }
 
 a {
@@ -104,14 +94,14 @@ img {
     border-color: var(--color-white);
 }
 
-.btn-primary{
+.btn-primary {
     background: var(--color-danger);
     color: var(--color-white);
 }
 
 /*========================= Navigation Bar =========================*/
-nav{
-    background: transparent ;
+nav {
+    background: transparent;
     width: 100vw;
     height: 5rem;
     position: fixed;
@@ -119,9 +109,10 @@ nav{
     left: 0;
     padding: 0.9rem 0;
     z-index: 9999;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1 );
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
 }
-.nav__container{
+
+nav .nav__container {
     height: 5rem;
     display: flex;
     justify-content: space-between;
@@ -171,213 +162,59 @@ nav ul button a {
 .nav__menu a:hover {
     color: var(--color-bg2);
 }
-/*========================= Navigation Bar End =========================*/
-main {
+/*========================= Footer =========================*/
+
+footer {
+    width: 100%;
+    height: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "follow-us social-links contact-us";
+    justify-items: center;
+}
+
+#love a {
+    display: inline-block;
     position: relative;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-}
-.parallax{
-    pointer-events: none;
-    transition: 0.45s cubic-bezier(0.2, 0.49, 0.32, 0.99);
-    transform: translate(-50%, -50%);
-}
-.bg-img{
-    position: absolute;
-    width: 2800px;
-    top: calc(50% - 390px);
-    left: calc(50% + 10px);
-    z-index: 1;
-    transform: translate(-50%, -50%);
-}
-.fog-7{
-    position: absolute;
-    z-index: 2;
-    top: calc(50% - 100px);
-    left: calc(50% + 300px);
-    width: 1900px; 
-    transform: translate(-50%, -50%);
-}
-.mountain-10{
-    position: absolute;
-    z-index: 3;
-    top: calc(50% + 69px);
-    width: 870px;
-    left: calc(50% + 230px);
-    transform: translate(-50%, -50%);
-}
-.fog-2 { 
-    position: absolute;
-    z-index: 4;
-    top: calc(50% + 95px);
-    left: calc(50% + 7px);
-    width: 1833px;
-    transform: translate(-50%, -50%);
-}   
-
-.mountain-9 {
-    position: absolute;
-    z-index: 5;
-    top: calc(50% + 119px); 
-    width: 463px;
-    left: calc(50% - 457px);
-    transform: translate(-50%, -50%);
 }
 
-.mountain-8{
+#love a::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: var(--color-bg);
+    display: block;
     position: absolute;
-    z-index: 6;
-    top: calc(50% + 96px);
-    width: 786px;
-    left: calc(50% - 202px);
-    transform: translate(-50%, -50%);
-}
-
-.fog-3{
-    position: absolute;
-    z-index: 7;
-    top: calc(50% + 171px);
-    left: calc(50% + 29px);
-    width: 449px;
-    transform: translate(-50%, -50%);
-}
-
-.mountain-7
-{   position: absolute;
-    z-index: 8;
-    width: 515px;
-    top: calc(50% + 134px);
-    left: calc(50% + 305px);
-    transform: translate(-50%, -50%);
-}  
-.text{
-    position: absolute;
-    z-index: 9;
-    top: calc(50% - 130px);
-    left: 50%;
-    text-align: center;
-    text-transform: uppercase;
-    pointer-events: auto;
-    color: #fff;
-}
-.text h2{
-    font-weight: 100;
-    font-size: 10;
-}
-.text h1{
-    font-weight: 800;
-    font-size: 8rem;
-    line-height: 0.88;
-}
-.mountain-6{
-    position: absolute;
-    z-index: 10;
-    top: calc(50% + 86.5px);
-    width: 383.5px;
-    left: calc(50% + 590px);
-    transform: translate(-50%, -50%);
-}
-.fog-4{
-    position: absolute;
-    z-index: 11;
-    top: calc(50% + 242px);
-    left: calc(50% - 64px);
-    width: 543px;
-    transform: translate(-50%, -50%);
-}
-
-.mountain-5{
-    position: absolute;
-    z-index: 12;
-    top: calc(50% + 269px);
-    width: 583px;
-    left: calc(50% + 130px);
-    transform: translate(-50%, -50%);
-}
-
-.fog-5{
-    position: absolute;
-    z-index: 13;
-    top: calc(50% + 149px);
-    left: calc(50% - 28px);
-    width: 1435px;
-    transform: translate(-50%, -50%);
-}
-
-.mountain-4{
-    position: absolute;
-    z-index: 14;
-    top: calc(50% + 221px);
-    width: 717px;
-    left: calc(50% - 381.5px);
-    transform: translate(-50%, -50%);
-}
-
-.mountain-3{
-    position: absolute;
-    z-index: 15;
-    top: calc(50% + 133px);
-    left: calc(50% + 736px);
-    width: 419px;
-    transform: translate(-50%, -50%);
-}
-
-.fog-6{
-    position: absolute;
-    z-index: 16;
-    top: calc(50% + 177px);
-    left: calc(50% - 30px);
-    width: 1418px;
-    transform: translate(-50%, -50%);
-}
-.mountain-2{
-    position: absolute;
-    z-index: 17;
-    top: calc(50% + 188px);
-    left: calc(50% + 412px);
-    width: 625px;
-    transform: translate(-50%, -50%);
-}
-.mountain-1{
-    position: absolute;
-    z-index: 18;
-    top: calc(50% + 91.5px);
-    left: calc(50% - 601px);
-    width: 450px;
-    transform: translate(-50%, -50%);
-}
-.sun-rays{
-    position: absolute;
-    z-index: 19;
-    top: 0;
-    right: 0;
-    width: 595px;
-    transform: translate(-50%, -50%);
-}
-.black-shadow {
-    position: absolute;
-    z-index: 20;
     bottom: 0;
-    right: 0;
-    width: 100vw;
-    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 600ms ease-in-out;
 }
-.fog-1{
-    position: absolute;
-    z-index: 21;
-    top: calc(100% - 355px);
-    left: 50%;
-    width: 1600px;
-    transform: translate(-50%, -50%);
+
+#love:hover a::after {
+    width: 100%;
+    opacity: 1;
 }
-.vignette {
-    position: absolute;
-    z-index: 100;
+
+#follow-us {
+    width: 50%;
+    height: 100%;
+}
+
+#follow-us ul {
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 65%, rgba(0,0,0,0.7));
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#follow-us ul li {
+    width: 100%;
+    font-size: 20px;
+    transition: font-size 300ms ease-in-out;
+}
+
+#follow-us ul li:hover {
+    font-size: 24px;
 }

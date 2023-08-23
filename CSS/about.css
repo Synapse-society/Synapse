@@ -1,0 +1,447 @@
+/* ================ CSS for "about.html" ================ */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* ---------------- Navbar ---------------- */
+nav {
+    user-select: none;
+}
+
+body {
+    background-color: var(--color-primary);
+}
+
+main {
+    margin-top: 7rem;
+}
+
+section h2 {
+    text-align: center;
+    margin: 3rem 0 2rem 0;
+}
+
+/* ---------------- About ---------------- */
+#about {
+    margin: 0 20rem;
+    padding-bottom: 50px;
+}
+
+#about .intro {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    width: fit-content;
+    position: relative;
+}
+
+#about .intro::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 7px;
+    background-color: var(--color-danger-variant);
+    border-radius: 30px;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    transition: all 1s ease-out 0s;
+}
+
+#about .intro:hover::after {
+    width: 100%;
+    opacity: 1;
+}
+
+#about p {
+    margin-top: 5px;
+}
+
+#about .ending {
+    font-family: cursive;
+    font-style: italic;
+}
+
+#about h4 {
+    margin-top: 20px;
+}
+
+/* ---------------- Goals ---------------- */
+#goals {
+    padding: 20px 20rem;
+    background-color: var(--color-bg1);
+    height: 400px;
+}
+
+#goals p:nth-of-type(1) {
+    font-style: italic;
+}
+
+#goals .goals::before {
+    content: "👉";
+    position: relative;
+    padding: 0 10px;
+}
+
+#goals .ending {
+    font-family: cursive;
+    font-style: italic;
+}
+
+/* ---------------- Our Team ---------------- */
+
+#our-team {
+    margin: 0;
+    padding: 30px 0;
+    /* background-color: var(--color-bg1); */
+}
+
+#team-grid {
+    padding: 0 20%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2em 3em;
+    grid-auto-flow: row;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas:
+        ". president vice ."
+        ". gen-sec web-admin ."
+        "head1 head2 head3 head4";
+}
+
+.team {
+    width: 325px;
+    height: 400px;
+    padding: 30px 0 40px;
+    border: 0 solid transparent;
+    border-radius: 7px;
+    margin-bottom: 30px;
+    background-color: var(--color-bg2);
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.team .pic {
+    display: inline-block;
+    height: 130px;
+    width: 130px;
+    margin-bottom: 50px;
+    z-index: 1;
+    position: relative;
+}
+
+.team .pic::before {
+    content: "";
+    width: 120%;
+    height: 0;
+    border-radius: 50%;
+    background-color: var(--color-bg1);
+    position: absolute;
+    bottom: 135%;
+    right: 0;
+    left: -10%;
+    opacity: 0.9;
+    transform: scale(3);
+    transition: all 0.3s ease-out 0s;
+}
+
+.team:hover .pic::before {
+    height: 100%;
+}
+
+.team .pic::after {
+    content: "";
+    width: 108%;
+    height: 108%;
+    border-radius: 50%;
+    background-color: var(--color-bg1);
+    position: absolute;
+    top: -4%;
+    left: -4%;
+    z-index: -1;
+}
+
+.team .pic img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 0.9s ease 0s;
+}
+
+.team:hover .pic img {
+    box-shadow: 0 0 0 7px var(--color-bg2);
+    transform: scale(0.9);
+}
+
+.team .title {
+    display: block;
+    font-size: 15px;
+    color: #4e5052;
+    text-transform: capitalize;
+}
+
+.team .social {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: var(--color-bg1);
+    position: absolute;
+    bottom: -110px;
+    left: 0;
+    transition: all 0.5s ease-out 0s;
+}
+
+.team:hover .social {
+    bottom: 0;
+}
+
+.team ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.team ul li {
+    display: inline-block;
+    width: 100%;
+}
+
+.team ul li a {
+    display: block;
+    padding: 10px;
+    font-size: 1.3em;
+    color: white;
+    transition: all 0.3s ease-out 0s;
+    text-decoration: none;
+}
+
+.team ul li a:hover {
+    color: var(--color-primary);
+    background-color: var(--color-bg2);
+}
+
+#president {
+    grid-area: president;
+}
+
+#vice {
+    grid-area: vice;
+}
+
+#gen-sec {
+    grid-area: gen-sec;
+}
+
+#web-admin {
+    grid-area: web-admin;
+}
+
+#head1 {
+    grid-area: head1;
+}
+
+#head2 {
+    grid-area: head2;
+}
+
+#head3 {
+    grid-area: head3;
+}
+
+#head4 {
+    grid-area: head4;
+}
+
+#president img,
+#vice img,
+#gen-sec img,
+#web-admin img,
+#head1 img,
+#head2 img,
+#head3 img,
+#head4 img {
+    height: 100%;
+}
+
+/* ---------------- Out Reach ---------------- */
+
+#outreach {
+    margin: 0;
+    padding: 30px 0;
+    background-color: var(--color-bg1);
+}
+
+#outreach #stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+    gap: 1em;
+    padding: 0em 3em 3em;
+    z-index: -3;
+}
+
+#stats .card {
+    background-color: var(--color-bg2);
+    width: 300px;
+    height: 150px;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    position: relative;
+    overflow: hidden;
+}
+
+#stats .card::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    filter: blur(5px);
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.3s ease-out 0s;
+}
+
+#stats .card:hover::before {
+    transform: scale(2);
+}
+
+#stats #members::before {
+    background-image: url("../images/3 presons logo.png");
+}
+
+#stats #instagram::before {
+    background-image: url("../images/instagram logo.png");
+}
+
+#stats #linkedin::before {
+    background-image: url("../images/linkedin logo.png");
+}
+
+#stats #whatsapp::before {
+    background-image: url("../images/whatsapp logo.png");
+}
+
+#stats #youtube::before {
+    background-image: url("../images/yt-logo.png");
+}
+
+#stats .card h3 {
+    display: inline-block;
+    align-self: flex-start;
+    color: var(--color-bg1);
+    z-index: 1;
+}
+
+#stats .card h3::before {
+    content: "";
+    width: 150px;
+    height: 100%;
+    background-color: var(--color-primary);
+    position: absolute;
+    left: -60%;
+    top: 0;
+    transition: all 0.3s ease-out 0s;
+    transform: skewX(-20deg);
+    z-index: -1;
+}
+
+#stats .card:hover h3::before {
+    left: -20%;
+}
+
+#stats .card .info img {
+    width: 50px;
+    height: 50px;
+}
+
+#stats #youtube img {
+    width: 50px;
+    height: auto;
+}
+
+#stats .card .info p {
+    color: var(--color-black);
+}
+
+/* ---------------- About IITM ---------------- */
+
+#about-iitm {
+    height: 350px;
+    padding: 10px 10rem;
+    margin-bottom: 50px;
+}
+
+/* #about-iitm p {
+    padding: 10px 10rem;
+} */
+
+#degree-stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.degree-stats-card {
+    width: 400px;
+    height: 125px;
+    background-color: var(--color-bg2);
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.degree-stats-card h3 {
+    color: var(--color-bg1);
+    font-size: 24px;
+    line-height: 40px;
+}
+.degree-stats-card h3 span {
+    display: inline-block;
+    position: relative;
+    transition: font-size 300ms ease-out 0s;
+}
+.degree-stats-card:hover h3 span {
+    font-size: 30px;
+}
+
+.degree-stats-card h3 span::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 5px;
+    opacity: 0;
+    background-color: var(--color-danger);
+    position: absolute;
+    bottom: 0;
+    transition: all 600ms ease-out 0s;
+}
+
+.degree-stats-card:hover h3 span::after {
+    width: 100%;
+    opacity: 1;
+}
