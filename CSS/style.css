@@ -1,4 +1,4 @@
-* {
+*, *::before,*::after {
     margin: 0;
     padding: 0;
     border: 0;
@@ -23,8 +23,15 @@
     --container-width-lg: 80%;
     --container-width-md: 90%;
     --container-width-sm: 94%;
-
     --transition: all 400ms ease;
+}
+
+main {
+    position: relative;
+    background-color: #1dc690;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
 }
 
 .Synapse-logo {
@@ -100,18 +107,62 @@ img {
 }
 
 /*========================= Navigation Bar =========================*/
-nav {
+
+header {
     background: transparent;
+    max-width: 1400px;
     width: 100vw;
     height: 5rem;
     position: fixed;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     top: 0;
     left: 0;
     padding: 0.9rem 0;
     z-index: 9999;
-    /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
 }
 
+.hamburger{
+    padding-left: 1.5rem;
+}
+.hamburger a{
+    padding: 0;
+    width: 37px;
+    height: 37px;
+    display: flex;
+    border-radius: 50%;
+    background-color: rgba(115, 115, 115, 0.7);
+    transform: translate(-50%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+}
+.hamburger.bar{
+    position: relative;
+    width: 52%;
+    height: 1.3px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+.hamburger.bar::before, 
+.hamburger.bar::after{
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    background-color: inherit;
+    border-radius: 2px;
+    left: 50%;
+
+}
+
+.hamburger.bar::before{
+    top: -4.5px;
+}
+.hamburger.bar::after{
+    top: 4.5px;
+}
 nav .nav__container {
     height: 5rem;
     display: flex;
@@ -174,24 +225,6 @@ footer {
     justify-items: center;
 }
 
-#love a {
-    display: inline-block;
-    position: relative;
-<<<<<<< Updated upstream
-}
-
-#love a::after {
-    content: "";
-    width: 0;
-    height: 3px;
-    background-color: var(--color-bg);
-    display: block;
-    position: absolute;
-=======
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-}
 .parallax{
     pointer-events: none;
     transition: 0.45s cubic-bezier(0.2, 0.49, 0.32, 0.99);
@@ -205,7 +238,7 @@ footer {
     top: 1.86%;
     left: 50.69%;
     z-index: 1;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%,-50%);
 }
 .fog-7{
     pointer-events: none;
@@ -215,7 +248,7 @@ footer {
     top: 37.7%;
     left: 70.8%;
     width: 132%; 
-    transform: translate(-50%, -50%);
+    transform: translate(-50%,-50%);
 }
 .mountain-10{
     pointer-events: none;
@@ -225,7 +258,7 @@ footer {
     top: calc(50% + 69px);
     width: 870px;
     left: calc(50% + 230px);
-    transform: translate(-50%, -50%);
+    transform: translate(-50%,-50%);
 }
 .fog-2 {
     pointer-events: none;
@@ -285,7 +318,7 @@ footer {
     transition: 0.45s cubic-bezier(0.2, 0.49, 0.32, 0.99);
     position: absolute;
     z-index: 9;
-    top: calc(50% - 130px);
+    top: calc(60% - 130px);
     left: 50%;
     text-align: center;
     text-transform: uppercase;
@@ -294,8 +327,9 @@ footer {
 }
 .text h2{
     font-weight: 100;
-    font-size: 10;
+    font-size: 4.5rem;
     text-align: center;
+    line-height: 0.88;
 }
 .text h1{
     font-weight: 800;
@@ -305,6 +339,7 @@ footer {
     font-size: 8rem;
     line-height: 0.88;
 }
+
 .mountain-6{
     pointer-events: none;
     transition: 0.45s cubic-bezier(0.2, 0.49, 0.32, 0.99);
@@ -413,17 +448,21 @@ footer {
     pointer-events: none;
     position: absolute;
     z-index: 20;
->>>>>>> Stashed changes
     bottom: 0;
     opacity: 0;
+    width: 100%;
     transition: all 600ms ease-in-out;
 }
-<<<<<<< Updated upstream
-
-#love:hover a::after {
+.vignette{
+    position: absolute;
+    z-index: 100;
+    pointer-events: none;
     width: 100%;
-    opacity: 1;
-=======
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0)65%,rgba(0,0,0,0.7));
+}
 .fog-1{
     position: absolute;
     pointer-events: none;
@@ -433,7 +472,6 @@ footer {
     width: 1600px;
     transition: 0.45s cubic-bezier(0.2, 0.49, 0.32, 0.99);
     transform: translate(-50%, -50%);
->>>>>>> Stashed changes
 }
 
 #follow-us {
@@ -444,27 +482,11 @@ footer {
 #follow-us ul {
     width: 100%;
     height: 100%;
-<<<<<<< Updated upstream
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-#follow-us ul li {
-    width: 100%;
-    font-size: 20px;
-    transition: font-size 300ms ease-in-out;
-}
-
-#follow-us ul li:hover {
-    font-size: 24px;
-}
-=======
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 65%, rgba(0, 0, 0, 0.781));
-}
 @media (max-width:1100px) {
     .text h1{
         font-size: 5.8rem;
@@ -519,4 +541,3 @@ footer {
         width: 30px;
     }
 }/*baaki ki resizing baad mein karna*/
->>>>>>> Stashed changes

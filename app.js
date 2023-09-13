@@ -1,16 +1,20 @@
 
-// --------------- Body ---------------
 const parallax_el = document.querySelectorAll(".parallax");
 const main = document.querySelector("main")
 
 let xValue = 0, 
 yValue = 0;
 
-let rotateDegree = 0;
+let rotateDegree = -0;
 parallax_el.forEach((el) => {
     el.style.transition = "0.45s cubic-bezier(0.2, 0.49, 0.32, 0.99)";
 });
 
+function update(cursorPosition)
+{
+
+}
+update(0);
 window.addEventListener("mousemove", (e)=> {
 
     if(timeline.isActive()) return;
@@ -22,17 +26,15 @@ window.addEventListener("mousemove", (e)=> {
         let speedy = el.dataset.speedy;
         let speedz = el.dataset.speedz;
         let rotateSpeed= el.dataset.rotation;
-        let isInLeft = parseFloat(getComputedStyle(el).left) < window.innerWidth/ 2 ? 1 : -1;
         let zValue= (e.clientX - parseFloat(getComputedStyle(el).left)) * isInLeft*0.1;
+        let isInLeft = parseFloat(getComputedStyle(el).left) < window.innerWidth / 2 ? 1 : -1;
+        
         el.style.transform = `perspective(2300px) translateZ(${
             zValue * speedz}px) rotateY(${rotateDegree * rotateSpeed}deg) translateX(calc(-50% + ${
-            -xValue *speedx }px))  translateY(calc(-50% + ${
-                yValue * speedy*0}px))`;
+            -xValue *speedx}px))  translateY(calc(-50% + ${
+                yValue * speedy}px))`;
+        update(e.clientX);
     });
-<<<<<<< Updated upstream
-});
-
-=======
     
 });
 if(window.innerWidth>=725){
@@ -70,4 +72,3 @@ timeline.from(".text h1",
     opacity: 0,
     duration: 1.5
 },"3");
->>>>>>> Stashed changes
