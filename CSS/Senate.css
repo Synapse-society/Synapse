@@ -186,6 +186,7 @@ nav ul button a {
 
 .about__achievements{
     margin-top: 3rem;
+    
     }
 
 .about__achievements-container{
@@ -259,7 +260,13 @@ nav ul button a {
     border: 1px solid transparent;
     border-radius: 2rem;
     transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
 
+.team__member:hover 
+.team__member-socials{
+    right: 0;
 }
 
 .team__member:hover{
@@ -268,13 +275,49 @@ nav ul button a {
     border-color: var(--color-primary);
     
 }
+
+.team__member-image img{
+    filter: saturate(0);
+}
+
+.team__member:hover img{
+    filter: saturate(1);
+}
+
+.team__member-info *{
+    text-align: center;
+    margin-top: 1.4rem;
+}
+
+.team__member-info p{
+    color: var(--color-light);
+}
+
+.team__member-socials{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-primary);
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: -2rem 0 2rem rgba(0,0,0,0.3);
+    transition: var(--transition);
+}
+
+.team__member-socials a{
+    padding: 1rem;
+
+}
+
 /*==============================Footer==============================*/
 footer{
     background: var(--color-bg1);
     padding-top: 5rem;
     font-size: 0.9rem;
     padding-bottom: 0.9rem;
-
+    position: relative;
 }
 
 .footer__container{

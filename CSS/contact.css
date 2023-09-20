@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #278ab0;
+    --color-success: #1dc690;
+    --color-danger: #e53119;
+    --color-warning: rgb(245, 233, 6);
+    --color-danger-variant: #621f07;
+    --color-white: #fff;
+    --color-light: #eaeae0;
+    --color-black: #000;
+    --color-bg: #062155;
+    --color-bg1: #345694;
+    --color-bg2: #7790bc;
+    --container-width-lg: 80%;
+    --container-width-md: 90%;
+    --container-width-sm: 94%;
+    --transition: all 400ms ease;
+}
+.contact__container{
+    background: var(--color-bg1);
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 4rem;
+    height: 30rem;
+    margin: 7rem auto;
+    border-radius:  1rem;
+}
+/*==============================================ASIDE=================================================*/
+.contact__aside{
+    background: var(--color-primary);
+    padding: 3rem;
+    border-radius: 1rem;
+    position: relative;
+    bottom: 9rem;
+}
+
+.aside__image{
+    width: 12rem;
+    margin-bottom: 2rem;
+}
+
+.contact__aside h2{
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.contact__aside p{
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+.contact__details li{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.contact__socials{
+    display: flex;
+    gap: 1rem;
+    ruby-merge: 3rem;
+}
+
+.contact__socials a{
+    background: var(--color-bg2);
+    padding: 0.5rem;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.contact__socials a:hover{
+    background: transparent;
+}
+
+/*============================================== FORM =================================================*/
+.contact__form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-right: 5rem;
+}
+
+.form__name{
+    display: flex;
+    gap: 1.2rem;
+}
+
+.contact__form input[type="text"]{
+    width: 50%;
+    margin-top: 0.9rem;
+}
+
+input,textarea{
+    width: 100%;
+    padding: 1rem;
+    background: var(--color-bg);
+    color: var(--color-white);
+}
+.contact__form .btn{
+    width: max-content;
+    cursor: pointer;
+    margin-top: 1rem;
+}

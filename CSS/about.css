@@ -121,7 +121,7 @@ nav {
     width: 100vw;
     height: 5rem;
     position: fixed;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    
     top: 0;
     left: 0;
     padding: 0.9rem 0;
@@ -273,7 +273,7 @@ header{
 
 /*==============================Departments==============================*/
 .departments{
-    margin-top: 22rem;
+    margin-top: 5rem;
 }
 
 .departments__container{
@@ -284,7 +284,7 @@ header{
 }
 
 .department{
-    border-radius: 10rem;
+    border-radius: 2rem;
     background: var(--color-bg1);
     text-align: center;
     border: 1px solid transparent;
