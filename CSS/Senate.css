@@ -359,6 +359,9 @@ footer ul li a:hover{
 /*======================================Responsive Design Less gooooo[Tablets]==========================================*/
 
 
+/*======================================Responsive Design Less gooooo[Tablets]==========================================*/
+
+
 @media screen and (max-width:1024px) {
     .container{
         width: var(--container-width-md);
@@ -380,5 +383,151 @@ h3 {
 
 h4 {
     font-size: 1.2rem;
+}
+
+
+/*========================NAVBAR Responsive==========================*/
+nav button{
+    display: inline-block;
+    background: transparent;
+    font-size: 1.8rem;
+    color: var(--color-white);
+    cursor: pointer;
+}
+nav button#close-menu-btn{
+    display: none;
+}
+.nav__menu{
+    position: fixed;
+    top: 5rem;
+    right:5%;
+    height: fit-content;
+    width: 18rem;
+    flex-direction: column;
+    display: none ;
+    gap: 0;
+}
+
+.nav__menu li{
+    width: 100%;
+    height: 5.8rem;
+    animation: animateNavItems 400ms linear forwards;  
+    transform-origin: top right;
+    opacity: 0;
+}
+
+.nav__menu li:nth-child(2){
+    animation-delay: 200ms;
+}
+.nav__menu li:nth-child(3){
+    animation-delay: 300ms;
+}
+.nav__menu li:nth-child(4){
+    animation-delay: 400ms;
+}
+.nav__menu li:nth-child(5){
+    animation-delay: 500ms;
+}
+
+
+@keyframes animateNavItems {
+    0%{
+        transform: rotateZ(-90deg) rotateX(90deg) scale(0.1);;
+    }
+    100%{
+        transform: rotateZ(0deg) rotateX(0) scale(1);
+        opacity: 1;
+    }
+    
+}
+.nav__menu li a{
+    background: var(--color-primary);
+    box-shadow: -4rem 6rem 10rem rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+
+}
+
+.nav__menu li a:hover{
+    background-color: var(--color-bg2);
+    color: var(--color-white);
+}
+
+/*========================================HEADER========================================*/
+.header{
+    height: 52vh;
+    margin-bottom: 4rem;
+}
+.header__container{
+    gap: 0;
+    padding-bottom: 3rem;
+}
+
+
+/*==========================================Achievements==========================================*/
+.about__achievements{
+    margin-top: 2rem;
+}
+.about__achievements-container{
+    grid-template-columns: 1fr;
+    gap: 4rem;
+}
+.about__achievements-left{
+    width: 80%;
+    margin: 0 auto;
+}
+.team__container{
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.3rem;
+}
+.team__member{
+    padding: 1rem;
+}
+
+}
+/*==========================================Footer==========================================*/
+@media screen and (max-width:600px) {
+    .container{
+        width: var(--container-width-sm);
+    }
+.footer__container{
+    grid-template-columns: 1fr 1fr;
+
+}
+}
+/*==========================================Media Queries Phone==========================================*/
+.nav__menu{
+    right: 3%;
+}
+/*==========================================Header==========================================*/
+@media screen and (max-width: 600px) {
+    .achievements__cards{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+    .team__container{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+    .team__member{
+        padding: 0;
+    }
+    .team__member p{
+        margin-bottom: 1.5rem;
+    }
+
+/*==========================================Footer==========================================*/
+.footer__container{
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+}
+.footer__1{
+    margin: 1rem auto;
+}
+.footer__Socials{
+    justify-content: center;
 }
 }
