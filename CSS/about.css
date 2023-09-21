@@ -17,6 +17,7 @@
     --color-white: #fff;
     --color-light: #eaeae0;
     --color-black: #000;
+    --color-department: teal;
     --color-bg: #062155;
     --color-bg1: #345694;
     --color-bg2: #7790bc;
@@ -25,13 +26,17 @@
     --container-width-sm: 94%;
     --transition: all 400ms ease;
 }
-
+html{
+    
+    scroll-behavior: auto;
+}
 main {
     position: relative;
     background-color: #1dc690;
     height: 100vh;
     width: 100vw;
     overflow: hidden;
+    overflow-y: hidden;
 }
 
 .Synapse-logo {
@@ -121,7 +126,6 @@ nav {
     width: 100vw;
     height: 5rem;
     position: fixed;
-    
     top: 0;
     left: 0;
     padding: 0.9rem 0;
@@ -172,6 +176,7 @@ nav ul button:hover {
 
 .nav__menu a {
     font-size: 0.9rem;
+    
     transition: var(--transition);
 }
 nav ul button a {
@@ -205,9 +210,7 @@ header{
 .categories{
     background: var(--color-bg1);
     height: 50rem;
-
 }
-
 .categories h1{
     line-height: 1;
     margin-bottom: 3rem;
@@ -231,7 +234,6 @@ header{
     grid-template-columns: repeat(3,1fr);
     gap: 1.2rem;
 }
-
 .category{
     background: var(--color-bg2);
     padding: 2rem;
@@ -254,8 +256,6 @@ header{
 .category:nth-child(5) .category_icon{
     background: var(--color-success);
 }
-
-
 .category:hover{
     box-shadow: 0 3rem 3rem rgba(0,0,0,0.3);
     z-index: 1;
@@ -269,15 +269,12 @@ header{
 .category h5{
     margin: 2rem 0 1rem;
 }
-
-
 /*==============================Departments==============================*/
 .departments{
     margin-top: 5rem;
 }
 
 .departments__container{
-    
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 2rem;
@@ -285,7 +282,7 @@ header{
 
 .department{
     border-radius: 2rem;
-    background: var(--color-bg1);
+    background: var(--color-department);
     text-align: center;
     border: 1px solid transparent;
     transition: var(--transition);
@@ -378,7 +375,6 @@ header{
     margin-top: 3rem;
     position: relative;
 }
-
 .testimonial__body::before{
     content: "";
     display: block;
@@ -390,8 +386,6 @@ header{
     top: -1.5rem;
     transform: rotate(45deg);
 }
-
-
 /*==============================Footer==============================*/
 footer{
     background: var(--color-bg1);
@@ -435,10 +429,60 @@ footer ul li a:hover{
     border-top: 1px solid var(--color-bg2);
 }
 
+/*======================================Scroll Animation==========================================*/
 
+@media (prefers-reduced-motion: no-preference) {
+    .category{
+        transition: all 1s;
+        filter: blur(5px);
+        transform: translateX(-100%);
+        overflow: hidden;
+    }
+}
+.show{
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+}
+.category:nth-child(2){
+    transition-delay:100ms;
+}
+.category:nth-child(3){
+    transition-delay:200ms;
+}
+.category:nth-child(5){
+    transition-delay:100ms;
+}
+.category:nth-child(6){
+    transition-delay:200ms;
+}
 
+@media (prefers-reduced-motion: no-preference) {
+    .department{
+        transition: all 1s;
+        filter: blur(5px);
+        transform: translateY(55%);
+        overflow-y: hidden;
+    }
+}
+.show{
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
+.department:nth-child(2){
+    transition-delay:100ms;
+}
+.department:nth-child(3){
+    transition-delay:200ms;
+}
+.department:nth-child(5){
+    transition-delay:100ms;
+}
+.department:nth-child(6){
+    transition-delay:200ms;
+}
 /*======================================Responsive Design Less gooooo[Tablets]==========================================*/
-
 
 @media screen and (max-width:1024px) {
     .container{
@@ -544,17 +588,19 @@ nav button#close-menu-btn{
 }
 
 /*========================================Goals========================================*/
-
 .categories{
     height: auto;
 }
 .categories_container{
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2rem;
 }
-
 .categories_left{
     margin-right: 0;
+    
+}
+.categories_right{
+    grid-template-columns: 1fr 1fr;
 }
 /*==========================================Department==========================================*/
 .departments{
@@ -570,7 +616,7 @@ nav button#close-menu-btn{
 }
 .faq{
     padding: 1.5rem;
-}
+}}
 /*==========================================Footer==========================================*/
 @media screen and (max-width:600px) {
     .container{
@@ -580,7 +626,7 @@ nav button#close-menu-btn{
     grid-template-columns: 1fr 1fr;
 
 }
-}
+
 /*==========================================Media Queries Phone==========================================*/
 .nav__menu{
     right: 3%;
@@ -599,7 +645,7 @@ nav button#close-menu-btn{
 }
 /*==========================================Goals==========================================*/
 .categories_right{
-    grid-template-columns: 1fr 1 fr;
+    grid-template-columns: 1fr;
     gap: 0.7rem;
 }
 .category_icon{

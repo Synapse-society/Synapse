@@ -44,3 +44,23 @@ const closeNav=()=>{
 }
 
 closeBtn.addEventListener('click', closeNav)
+
+
+//Animation Scroll
+const observer = new IntersectionObserver((entries) =>{
+    entries.forEach(entry =>{
+        console.log(entry)
+        if (entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+        else
+            entry.target.classList.remove('show');
+    });
+});
+
+{const categoryElements = document.querySelectorAll('.category');
+categoryElements.forEach((el) => observer.observe(el));
+
+const departmentElements = document.querySelectorAll('.department');
+departmentElements.forEach((el) => observer.observe(el));
+}
