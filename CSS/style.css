@@ -27,15 +27,17 @@
 }
 main {
     position: relative;
-    background-color: #1dc690;
+    background-color: #f4f8f6;
     height: 100vh;
     width: 100vw;
     overflow-y: hidden;
     overflow-x: hidden;
-    
 }
 .Synapse-logo {
+    color: #000;
+    font-family:'sans-serif' ;
     width: 100px;
+    text-align: center;
 }
 ::selection {
     background-color: #0b372dbb;
@@ -44,12 +46,94 @@ main {
     width: var(--container-width-lg);
     margin: 0 auto;
 }
+.preloader{
+    position: fixed;
+    top: 0;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    z-index: 999999;
+    background:#070707;
+    width: 100%;
+    height: 100vh;
+}
+.preloader:before{
+    content: 'Loading';
+    position: absolute;
+    font-size: 12em;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.03);
+}
+.preloader.active{
+    transform: translateY(-100vh);
+    transition: ease-in-out 2s;
+    transition-delay: 1s;
+}
+.counter{
+    position: relative;
+    color: #fff;
+    font-size: 16em;
+    font-weight: 700;
+    z-index: 1;
+}
+
+.counter:after{
+    content: '%';
+    font-size: 0.5em;
+}
+.mide{
+    opacity: 0;
+    transition: 1s;
+    pointer-events: none;
+}
+
+/*.loader{
+    align-content: center;
+    border: 0 solid transparent;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: calc(50vh - 75px);
+    left: calc(50vw - 75px);
+}
+.loader::before, .loader::after{
+    align-items: center;
+    content: '';
+    border: 1rem solid #ff5733;
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader 2s linear infinite;
+    opacity: 0;
+}
+
+.loader::before{
+    animation-delay: .5s;
+}
+@keyframes loader {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: scale(1);
+    }
+}*/
 
 body {
     font-family: "Montserrat", sans-serif;
     line-height: 1.7;
     color: var(--color-white);
-    background: rgb(7, 135, 7)
+    background: rgb(255, 255, 255)
 }
 
 section{
