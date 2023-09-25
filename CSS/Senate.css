@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +18,6 @@
     --color-white: #fff;
     --color-light: #eaeae0;
     --color-black: #000;
-    --color-department: teal;
     --color-bg: #062155;
     --color-bg1: #345694;
     --color-bg2: #7790bc;
@@ -26,10 +26,15 @@
     --container-width-sm: 94%;
     --transition: all 400ms ease;
 }
-html{
-    
-    scroll-behavior: auto;
+
+main {
+    position: relative;
+    background-color: #1dc690;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
 }
+
 .Synapse-logo {
     font-family:'sans-serif' ;
     width: 100px;
@@ -119,6 +124,7 @@ nav {
     width: 100vw;
     height: 5rem;
     position: fixed;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     top: 0;
     left: 0;
     padding: 0.9rem 0;
@@ -169,7 +175,6 @@ nav ul button:hover {
 
 .nav__menu a {
     font-size: 0.9rem;
-    
     transition: var(--transition);
 }
 nav ul button a {
@@ -179,213 +184,142 @@ nav ul button a {
 .nav__menu a:hover {
     color: var(--color-bg2);
 }
-/*========================= Header =========================*/
+    /*========================= Navigation Bar =========================*/
 
-header{
-    position: relative;
-    top: 5rem;
-    overflow: hidden;
-    height: 70vh;
-    margin-bottom: 6rem;
-}
+.about__achievements{
+    margin-top: 3rem;
+    
+    }
 
-.header__container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 5rem;
-    height: 100%;
-}
-.header__left p{
-    margin: 1rem 0 2.4rem;
-}
-/*========================= Goals =========================*/
-.categories{
-    background: var(--color-bg1);
-    height: 50rem;
-}
-.categories h1{
-    line-height: 1;
-    margin-bottom: 3rem;
-}
-
-.categories_container{
+.about__achievements-container{
     display: grid;
     grid-template-columns: 40% 60%;
-    /*gap: 4rem;*/
+    gap: 5rem;
+}
+.about__achievements-right > p {
+    margin: 1.6rem 0 2.5rem;
 }
 
-.categories_left{
-    margin-right: 4rem;
-}
-
-.categories_left p{
-    margin: 1rem 0 3rem;
-}
-.categories_right{
+.achievements__cards{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 1.2rem;
-}
-.category{
-    background: var(--color-bg2);
-    padding: 2rem;
-    border-radius: 2rem;
-    transition: var(--transition);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
 }
 
-.category:nth-child(2) .category_icon{
-    background: var(--color-danger);
-}
-
-.category:nth-child(3) .category_icon{
-    background: var(--color-success);
-}
-
-.category:nth-child(4) .category_icon{
-    background: var(--color-warning);
-}
-
-.category:nth-child(5) .category_icon{
-    background: var(--color-success);
-}
-.category:hover{
-    box-shadow: 0 3rem 3rem rgba(0,0,0,0.3);
-    z-index: 1;
-}
-
-.category_icon{
-    background-color: var(--color-primary);
-    padding: 0.7rem;
-    border-radius: 0.9rem;
-}
-.category h5{
-    margin: 2rem 0 1rem;
-}
-/*==============================Departments==============================*/
-.departments{
-    margin-top: 5rem;
-}
-
-.departments__container{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 2rem;
-}
-
-.department{
-    border-radius: 2rem;
-    background: var(--color-department);
+.achievement__card{
+    background: var(--color-bg1);
+    padding: 1.6rem;
+    border-radius: 1rem;
     text-align: center;
-    border: 1px solid transparent;
     transition: var(--transition);
 }
 
-.department:hover{
-    background: transparent;
-    border-color: var(--color-primary);
+.achievement__card:hover{
+    background: var(--color-bg2);
+    box-shadow: 0 3rem 3rem rgba(0,0,0,0.3);
 }
 
-.department_info{
-    padding: 2rem;
+.achievement__icon{
+    background: var(--color-danger);
+    padding: 0.6rem;
+    border-radius: 1rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-size: 2rem;
 }
 
-.department_info p{
-    margin: 1.2rem 0 2rem;
-    font-size: 0.9rem;
+.achievement__card:nth-child(2) 
+.achievement__icon{
+    background: var(--color-success);
 }
 
-/*==============================FAQs==============================*/
-.faqs{
+.achievement__card:nth-child(3) 
+.achievement__icon{
+    background: var(--color-primary);
+}
+
+.achievement__card p{
+    margin-top: 1rem;
+}
+
+
+
+.team{
     background: var(--color-bg1);
     box-shadow: inset 0 0 3rem rgba(0,0,0,0.5);
 }
-.faqs__container{
+
+.team__container
+{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
 }
 
-.faq{
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    gap: 1.4rem;
-}
-.faq{
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    gap: 1.4rem;
-    height: fit-content;
-    background: var(--color-primary);
-    cursor: pointer;
-}
-.faq h4{
-    font-size: 1rem;
-    line-height: 2.2rem;
+.team__member{
+    padding:2rem;
+    background: var(--color-bg2);
+    border: 1px solid transparent;
+    border-radius: 2rem;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
 }
 
-.faq__icon{
-    align-self: flex-start;
-    font-size: 1.2rem;
+.team__member:hover 
+.team__member-socials{
+    right: 0;
 }
-.faq p{
-    margin-top: 0.8rem;
-    display: none;
+
+.team__member:hover{
+    padding:2rem;
+    background: transparent;
+    border-color: var(--color-primary);
     
 }
 
-.faq.open p{
-    display: block;
-}
-/*==============================Testimonials==============================*/
-
-.testimonials__container{
-    position: relative;
-    overflow-x: hidden;
-    margin-bottom: 5rem;
-}
-.testimonial{
-    padding-top: 2rem;
+.team__member-image img{
+    filter: saturate(0);
 }
 
-.avatar{
-    width: 6rem;
-    height: 6rem;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 0 auto 1rem;
-    border: 1rem solid var(--color-bg1);
+.team__member:hover img{
+    filter: saturate(1);
 }
 
-.testimonial__info{
+.team__member-info *{
     text-align: center;
+    margin-top: 1.4rem;
 }
-.testimonial__body{
-    background: var(--color-primary);
-    padding: 2rem;
-    margin-top: 3rem;
-    position: relative;
+
+.team__member-info p{
+    color: var(--color-light);
 }
-.testimonial__body::before{
-    content: "";
-    display: block;
-    background: linear-gradient(135deg,transparent, var(--color-primary),var(--color-primary), var(--color-primary));
-    width: 3rem;
-    height: 3rem;
+
+.team__member-socials{
     position: absolute;
-    left: 45%;
-    top: -1.5rem;
-    transform: rotate(45deg);
+    top: 50%;
+    transform: translateY(-50%);
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-primary);
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: -2rem 0 2rem rgba(0,0,0,0.3);
+    transition: var(--transition);
 }
+
+.team__member-socials a{
+    padding: 1rem;
+
+}
+
 /*==============================Footer==============================*/
 footer{
     background: var(--color-bg1);
     padding-top: 5rem;
     font-size: 0.9rem;
     padding-bottom: 0.9rem;
-
+    position: relative;
 }
 
 .footer__container{
@@ -422,60 +356,13 @@ footer ul li a:hover{
     border-top: 1px solid var(--color-bg2);
 }
 
-/*======================================Scroll Animation==========================================*/
 
-@media (prefers-reduced-motion: no-preference) {
-    .category{
-        transition: all 1s;
-        filter: blur(5px);
-        transform: translateX(-100%);
-        overflow: hidden;
-    }
-}
-.show{
-    opacity: 1;
-    transform: translateX(0);
-    filter: blur(0);
-}
-.category:nth-child(2){
-    transition-delay:100ms;
-}
-.category:nth-child(3){
-    transition-delay:200ms;
-}
-.category:nth-child(5){
-    transition-delay:100ms;
-}
-.category:nth-child(6){
-    transition-delay:200ms;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-    .department{
-        transition: all 1s;
-        filter: blur(5px);
-        transform: translateY(55%);
-        overflow-y: hidden;
-    }
-}
-.show{
-    opacity: 1;
-    transform: translateY(0);
-    filter: blur(0);
-}
-.department:nth-child(2){
-    transition-delay:100ms;
-}
-.department:nth-child(3){
-    transition-delay:200ms;
-}
-.department:nth-child(5){
-    transition-delay:100ms;
-}
-.department:nth-child(6){
-    transition-delay:200ms;
-}
 /*======================================Responsive Design Less gooooo[Tablets]==========================================*/
+
+
+/*======================================Responsive Design Less gooooo[Tablets]==========================================*/
+
 
 @media screen and (max-width:1024px) {
     .container{
@@ -580,36 +467,28 @@ nav button#close-menu-btn{
     padding-bottom: 3rem;
 }
 
-/*========================================Goals========================================*/
-.categories{
-    height: auto;
+
+/*==========================================Achievements==========================================*/
+.about__achievements{
+    margin-top: 2rem;
 }
-.categories_container{
+.about__achievements-container{
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 4rem;
 }
-.categories_left{
-    margin-right: 0;
-    
+.about__achievements-left{
+    width: 80%;
+    margin: 0 auto;
 }
-.categories_right{
-    grid-template-columns: 1fr 1fr;
+.team__container{
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.3rem;
 }
-/*==========================================Department==========================================*/
-.departments{
-    margin-top: 0;
+.team__member{
+    padding: 1rem;
 }
-.departments__container{
-    grid-template-columns: 1fr 1fr;
-}
-/*==========================================FAQs==========================================*/
-.faqs__container{
-    grid-template-columns: 1fr;
 
 }
-.faq{
-    padding: 1.5rem;
-}}
 /*==========================================Footer==========================================*/
 @media screen and (max-width:600px) {
     .container{
@@ -619,40 +498,28 @@ nav button#close-menu-btn{
     grid-template-columns: 1fr 1fr;
 
 }
-
+}
 /*==========================================Media Queries Phone==========================================*/
 .nav__menu{
     right: 3%;
 }
 /*==========================================Header==========================================*/
-.header{
-    height: 100vh;
-}
-.header__container{
-    grid-template-columns: 1fr;
-    text-align: center;
-    margin-top: 0rem;
-}
-.header__left p{
-    margin-bottom: 1.3rem;
-}
-/*==========================================Goals==========================================*/
-.categories_right{
-    grid-template-columns: 1fr;
-    gap: 0.7rem;
-}
-.category_icon{
-    margin-top: 4px;
-    display: inline-block;
-}
-/*==========================================Departments==========================================*/
-.departments__container{
-    grid-template-columns: 1fr;
-}
-/*==========================================Testimonials==========================================*/
-.testimonial__body{
-    padding: 1.2rem;
-}
+@media screen and (max-width: 600px) {
+    .achievements__cards{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+    .team__container{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+    .team__member{
+        padding: 0;
+    }
+    .team__member p{
+        margin-bottom: 1.5rem;
+    }
+
 /*==========================================Footer==========================================*/
 .footer__container{
     grid-template-columns: 1fr;
