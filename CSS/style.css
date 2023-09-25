@@ -27,14 +27,14 @@
 }
 main {
     position: relative;
-    background-color: #f4f8f6;
+    background-color: #7b968d;
     height: 100vh;
     width: 100vw;
     overflow-y: hidden;
     overflow-x: hidden;
 }
 .Synapse-logo {
-    color: #000;
+    color: #68c9bd;
     font-family:'sans-serif' ;
     width: 100px;
     text-align: center;
@@ -536,6 +536,9 @@ nav ul button a {
         padding: 0;
         overflow-y: hidden;
     }
+    .counter{
+        font-size: 9em;
+        } 
     .text h1{
         font-size: 5.8rem;
     }
@@ -544,6 +547,9 @@ nav ul button a {
     }
 }
 @media (max-width:725px) {
+    .counter{
+        font-size: 9em;
+        } 
     .text h1{
         font-size: 5rem;
         line-height: 1.1;
@@ -606,12 +612,12 @@ nav ul button a {
         padding: 0;
         overflow: hidden;
     }
-    
-
-
-h1 {
+    .counter{
+    font-size: 12em;
+    } 
+    h1 {
     font-size: 2.2rem;
-}
+    }
 
 h2 {
     font-size: 1.7rem;
@@ -697,6 +703,9 @@ nav button#close-menu-btn{
 @media screen and (max-width:600px) {
     .container{
         width: var(--container-width-sm);
+    }
+    .counter{
+        font-size: 7em;
     }
 /*==========================================Media Queries Phone==========================================*/
 .nav__menu{
