@@ -26,15 +26,29 @@
     --container-width-sm: 94%;
     --transition: all 400ms ease;
 }
-html{
-    
-    scroll-behavior: auto;
+
+html {
+    scroll-behavior: smooth;
 }
+
 .Synapse-logo {
     font-family:'sans-serif' ;
-    width: 100px;
+    width: 250px;
     text-align: center;
+    padding-top: 35px;
 }
+
+.Synapse-logo .name {
+    display: inline;
+    position: relative;
+    top: -50px;
+}
+
+#logo_img {
+    position: relative;
+    width: 4.5rem;
+}
+
 ::selection {
     background-color: #0b372dbb;
 }
@@ -117,7 +131,7 @@ img {
 nav {
     background: transparent;
     width: 100vw;
-    height: 5rem;
+    height: 6rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -199,6 +213,49 @@ header{
 .header__left p{
     margin: 1rem 0 2.4rem;
 }
+
+
+header h1 span {
+    position: relative;
+}
+
+
+header h1 span::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: -12%;
+    left: 0;
+    background-color: var(--color-bg2);
+    width: 0;
+    height: 5px;
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+header h1::after {
+    content:"";
+    display: inline-block;
+    position: relative;
+    top: 10px;
+    background-image: url("../images/Synapse logo.png");
+    background-repeat: no-repeat;
+    background-size: 120% 120%;
+    width: 50px; 
+    height: 50px;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+header h1:hover::after {
+    opacity: 1;
+}
+
+header h1:hover span::after {
+    width: 100%;
+}
+
+
 /*========================= Goals =========================*/
 .categories{
     background: var(--color-bg1);
@@ -224,14 +281,14 @@ header{
 }
 .categories_right{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.2rem;
 }
 .category{
     background: var(--color-bg2);
     padding: 2rem;
-    border-radius: 2rem;
-    transition: var(--transition);
+    border-radius: 10px;
+    transition: transform 200ms ease, var(--transition);
 }
 
 .category:nth-child(2) .category_icon{
@@ -252,6 +309,7 @@ header{
 .category:hover{
     box-shadow: 0 3rem 3rem rgba(0,0,0,0.3);
     z-index: 1;
+    transform: scale(1.1);
 }
 
 .category_icon{
@@ -259,9 +317,35 @@ header{
     padding: 0.7rem;
     border-radius: 0.9rem;
 }
+
 .category h5{
+    font-size: 1rem;
+    position: relative;
     margin: 2rem 0 1rem;
+    width: fit-content;
 }
+.category h5::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    background-color: var(--color-bg);
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: width 400ms ease;
+}
+
+
+.category:hover h5::after {
+    width: 100%;
+}
+
+.category:nth-child(1):hover h5::after {
+    width: 40%;
+}
+
+
 /*==============================Departments==============================*/
 .departments{
     margin-top: 5rem;
@@ -306,13 +390,8 @@ header{
     gap: 1rem;
 }
 
-.faq{
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    gap: 1.4rem;
-}
-.faq{
+
+.faq {
     padding: 2rem;
     display: flex;
     align-items: center;
@@ -322,6 +401,7 @@ header{
     cursor: pointer;
 }
 .faq h4{
+    position: relative;
     font-size: 1rem;
     line-height: 2.2rem;
 }

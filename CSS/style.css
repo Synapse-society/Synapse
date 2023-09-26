@@ -264,34 +264,8 @@ nav ul button a {
 }
 /*========================= Footer =========================*/
 
-footer {
-    width: 100%;
-    height: 3rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    grid-template-areas: "follow-us social-links contact-us";
-    justify-items: center;
-}
 
-#love a {
-    display: inline-block;
-    position: relative;
-<<<<<<< Updated upstream
-}
 
-#love a::after {
-    content: "";
-    width: 0;
-    height: 3px;
-    background-color: var(--color-bg);
-    display: block;
-    position: absolute;
-=======
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-}
 .parallax{
     pointer-events: none;
     transition: 0.45s cubic-bezier(0.2, 0.49, 0.32, 0.99);
@@ -305,7 +279,7 @@ footer {
     top: 1.86%;
     left: 50.69%;
     z-index: 1;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%,-50%);
 }
 .fog-7{
     pointer-events: none;
@@ -315,7 +289,7 @@ footer {
     top: 37.7%;
     left: 70.8%;
     width: 132%; 
-    transform: translate(-50%, -50%);
+    transform: translate(-50%,-50%);
 }
 .mountain-10{
     pointer-events: none;
@@ -325,7 +299,7 @@ footer {
     top: calc(50% + 69px);
     width: 870px;
     left: calc(50% + 230px);
-    transform: translate(-50%, -50%);
+    transform: translate(-50%,-50%);
 }
 .fog-2 {
     pointer-events: none;
@@ -385,7 +359,7 @@ footer {
     transition: 0.45s cubic-bezier(0.2, 0.49, 0.32, 0.99);
     position: absolute;
     z-index: 9;
-    top: calc(50% - 130px);
+    top: calc(60% - 130px);
     left: 50%;
     text-align: center;
     text-transform: uppercase;
@@ -394,8 +368,9 @@ footer {
 }
 .text h2{
     font-weight: 100;
-    font-size: 10;
+    font-size: 4.5rem;
     text-align: center;
+    line-height: 0.88;
 }
 .text h1{
     font-weight: 800;
@@ -405,6 +380,7 @@ footer {
     font-size: 8rem;
     line-height: 0.88;
 }
+
 .mountain-6{
     pointer-events: none;
     transition: 0.45s cubic-bezier(0.2, 0.49, 0.32, 0.99);
@@ -513,18 +489,21 @@ footer {
     pointer-events: none;
     position: absolute;
     z-index: 20;
->>>>>>> Stashed changes
     bottom: 0;
     opacity: 0;
     width: 100%;
     transition: all 600ms ease-in-out;
 }
-<<<<<<< Updated upstream
-
-#love:hover a::after {
+.vignette{
+    position: absolute;
+    z-index: 100;
+    pointer-events: none;
     width: 100%;
-    opacity: 1;
-=======
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0)65%,rgba(0,0,0,0.7));
+}
 .fog-1{
     position: absolute;
     pointer-events: none;
@@ -534,7 +513,6 @@ footer {
     width: 1600px;
     transition: 0.45s cubic-bezier(0.2, 0.49, 0.32, 0.99);
     transform: translate(-50%, -50%);
->>>>>>> Stashed changes
 }
 
 #follow-us {
@@ -550,22 +528,14 @@ footer {
     justify-content: space-around;
 }
 
-#follow-us ul li {
-    width: 100%;
-    font-size: 20px;
-    transition: font-size 300ms ease-in-out;
-}
-
-#follow-us ul li:hover {
-    font-size: 24px;
-}
-=======
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 65%, rgba(0, 0, 0, 0.781));
-}
 @media (max-width:1100px) {
+    html,main{
+        width: 100%;
+        height:100%;
+        margin: 0;
+        padding: 0;
+        overflow-y: hidden;
+    }
     .text h1{
         font-size: 5.8rem;
     }
@@ -573,7 +543,14 @@ footer {
         font-size: 4.7rem;
     }
 }
-@media (max-width:725px) {
+@media (max-width:770px) {
+    .preloader::before{
+        content: 'LOADING';
+        font-size: 8em;
+    }
+    .counter{
+        font-size: 9em;
+        } 
     .text h1{
         font-size: 5rem;
         line-height: 1.1;
@@ -588,17 +565,27 @@ footer {
     .Synapse-logo{
         width: 75px;
     }
-    /*header size*/
-    .hamburger a{
-        height: 30px;
-        width: 30px;
+    html,main{
+        width: 100%;
+        height:100%;
+        margin: 0;
+        padding: 0;
+        overflow-y: hidden;
     }
+    
     .bg-img{
         width: initial;
         height: 311.104%;
     }
 }
 @media (max-width:520px) {
+    html,main{
+        width: 100%;
+        height:100%;
+        margin: 0;
+        padding: 0;
+        overflow-y: hidden;
+    }
     .text h1{
         font-size: 3.3rem;
         line-height: 1.1;
@@ -613,10 +600,116 @@ footer {
     .Synapse-logo{
         width: 75px;
     }
-    /*header size*/
-    .hamburger a{
-        height: 30px;
-        width: 30px;
+}
+
+@media screen and (max-width:1024px) {
+    .container{
+        width: var(--container-width-md);
     }
-}/*baaki ki resizing baad mein karna*/
->>>>>>> Stashed changes
+    html,body{
+        width: 100%;
+        height:100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    h1 {
+    font-size: 2.2rem;
+    }
+
+h2 {
+    font-size: 1.7rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+
+/*========================NAVBAR Responsive==========================*/
+nav button{
+    display: inline-block;
+    background: transparent;
+    font-size: 1.8rem;
+    color: var(--color-white);
+    cursor: pointer;
+}
+nav button#close-menu-btn{
+    display: none;
+}
+.nav__menu{
+    position: fixed;
+    top: 5rem;
+    right:5%;
+    height: fit-content;
+    width: 18rem;
+    flex-direction: column;
+    display: none ;
+    gap: 0;
+}
+
+.nav__menu li{
+    width: 100%;
+    height: 5.8rem;
+    animation: animateNavItems 400ms linear forwards;  
+    transform-origin: top right;
+    opacity: 0;
+}
+
+.nav__menu li:nth-child(2){
+    animation-delay: 200ms;
+}
+.nav__menu li:nth-child(3){
+    animation-delay: 300ms;
+}
+.nav__menu li:nth-child(4){
+    animation-delay: 400ms;
+}
+.nav__menu li:nth-child(5){
+    animation-delay: 500ms;
+}
+
+
+@keyframes animateNavItems {
+    0%{
+        transform: rotateZ(-90deg) rotateX(90deg) scale(0.1);;
+    }
+    100%{
+        transform: rotateZ(0deg) rotateX(0) scale(1);
+        opacity: 1;
+    }
+    
+}
+.nav__menu li a{
+    background: var(--color-primary);
+    box-shadow: -4rem 6rem 10rem rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.nav__menu li a:hover{
+    background-color: var(--color-bg2);
+    color: var(--color-white);
+}}
+
+@media screen and (max-width:600px) {
+    .container{
+        width: var(--container-width-sm);
+    }
+    .preloader::before{
+        content: 'LOADING';
+        font-size: 4em;
+    }
+    .counter{
+        font-size: 6em;
+    }
+/*==========================================Media Queries Phone==========================================*/
+.nav__menu{
+    right: 3%;
+}}/*baaki ki resizing baad mein karna*/
