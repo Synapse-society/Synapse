@@ -367,6 +367,13 @@ footer ul li a:hover{
     font-size: 1.2rem;
     margin-top: 2rem;
 }
+
+hr {
+    border: 0.5px solid rgba(119, 144, 188, 0.233);
+    margin: 10px 0;
+}
+
+
 .footer__copyright{
     text-align: center;
     margin-top: 4rem;
@@ -374,6 +381,13 @@ footer ul li a:hover{
     border-top: 1px solid var(--color-bg2);
 }
 
+.footer__copyright img {
+    display: inline;
+    position: relative;
+    top: 7px;
+    left: 5px;
+    width: 20px;
+}
 
 
 /*======================================Responsive Design Less gooooo[Tablets]==========================================*/
@@ -549,5 +563,9 @@ nav button#close-menu-btn{
 }
 .footer__Socials{
     justify-content: center;
+}
+hr {
+    width: 30%;
+    margin-left: 35%;
 }
 }
