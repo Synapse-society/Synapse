@@ -136,6 +136,7 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding: 0.9rem 0;
     z-index: 9999;
 }
@@ -184,7 +185,7 @@ nav ul button:hover {
 
 .nav__menu a {
     font-size: 0.9rem;
-    
+    font-weight: bold;
     transition: var(--transition);
 }
 nav ul button a {
@@ -194,6 +195,23 @@ nav ul button a {
 .nav__menu a:hover {
     color: var(--color-bg2);
 }
+
+#current_page {
+    position: relative;
+}
+
+#current_page::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: -20%;
+    bottom: calc(0.9rem - 49px);
+    width: 150%;
+    height: 3px;
+    background: rgba(119, 144, 188, 0.31);
+    box-shadow: 0 -3px 10px 5px rgba(119, 144, 188, 0.11);
+}
+
 /*========================= Header =========================*/
 
 header{
@@ -501,6 +519,7 @@ footer ul li a:hover{
 hr {
     border: 0.5px solid rgba(119, 144, 188, 0.233);
     margin: 10px 0;
+    width: 40%;
 }
 
 .footer__copyright{
@@ -508,6 +527,11 @@ hr {
     margin-top: 4rem;
     margin-bottom: 0.2rem;
     border-top: 1px solid var(--color-bg2);
+}
+
+.footer__copyright a:hover {
+    text-decoration: underline;
+    text-decoration-style: wavy;
 }
 
 .footer__copyright img {
@@ -597,6 +621,9 @@ h4 {
     font-size: 1.2rem;
 }
 
+#current_page {
+    display: none;
+}
 
 /*========================NAVBAR Responsive==========================*/
 nav button{
@@ -726,6 +753,11 @@ nav button#close-menu-btn{
 .nav__menu{
     right: 3%;
 }
+
+#current_page {
+    display: none;
+}
+
 /*==========================================Header==========================================*/
 .header{
     height: 100vh;

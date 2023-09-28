@@ -74,7 +74,7 @@ body {
 }
 
 section{
-    padding: 6rem 0;
+    padding-top: 6rem;
 }
 section h2{
     text-align: center;
@@ -194,6 +194,7 @@ nav ul button:hover {
 .nav__menu a {
     font-size: 0.9rem;
     transition: var(--transition);
+    font-weight: bold;
 }
 nav ul button a {
     all: unset;
@@ -202,7 +203,25 @@ nav ul button a {
 .nav__menu a:hover {
     color: var(--color-bg2);
 }
-    /*========================= Navigation Bar =========================*/
+
+#current_page {
+    position: relative;
+}
+
+#current_page::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: -20%;
+    bottom: calc(0.9rem - 49px);
+    width: 150%;
+    height: 3px;
+    background: rgba(119, 144, 188, 0.31);
+    box-shadow: 0 -3px 10px 5px rgba(119, 144, 188, 0.11);
+}
+
+
+/*========================= Navigation Bar =========================*/
 
 .about__achievements{
     margin-top: 3rem;
@@ -371,6 +390,7 @@ footer ul li a:hover{
 hr {
     border: 0.5px solid rgba(119, 144, 188, 0.233);
     margin: 10px 0;
+    width: 60%;
 }
 
 
@@ -419,6 +439,9 @@ h4 {
     font-size: 1.2rem;
 }
 
+#current_page {
+    display: none;
+}
 
 /*========================NAVBAR Responsive==========================*/
 nav button{
@@ -530,6 +553,12 @@ nav button#close-menu-btn{
     grid-template-columns: 1fr 1fr;
 
 }
+
+#current_page {
+    display: none;
+}
+
+
 }
 /*==========================================Media Queries Phone==========================================*/
 .nav__menu{
