@@ -121,6 +121,7 @@ section h2{
 
 .textoboxu:hover {
     background: var(--color-light);
+    transition: ease-out 100ms;
 }
 .textoboxu:hover small {
     color: var(--color-primary);
@@ -204,6 +205,8 @@ section h2{
 .textoboxu:hover {
     .left-container-arrow, .right-container-arrow {
         border-right-color: var(--color-light);
+        border-left-color: var(--color-light);
+        transition: ease-out 100ms;
     }
 }
 
