@@ -291,6 +291,7 @@ nav ul button a {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    padding-bottom: 6rem;
 }
 
 .team__member{
@@ -352,6 +353,7 @@ nav ul button a {
 
 /*==============================Footer==============================*/
 footer{
+    
     background: var(--color-bg1);
     padding-top: 5rem;
     font-size: 0.9rem;
