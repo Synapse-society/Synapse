@@ -289,7 +289,7 @@ nav ul button a {
 .team__container
 {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     padding-bottom: 6rem;
 }
@@ -487,7 +487,9 @@ nav button#close-menu-btn{
 .nav__menu li:nth-child(5){
     animation-delay: 500ms;
 }
-
+.nav__menu li:nth-child(6){
+    animation-delay: 600ms;
+}
 
 @keyframes animateNavItems {
     0%{

@@ -762,6 +762,85 @@ nav ul button a {
     .Synapse-logo{
         width: 75px;
     }
+    .bg-img{
+        width: initial;
+        height: 311.104%;
+    }
+    .fog-7{
+        display: none;
+    }
+    .mountain-10{
+        display: none;
+    }
+    .fog-2{
+        width: initial;
+        height: 203.664%;
+    }
+    .mountain-9{
+        display: none;
+    }
+    .mountain-8{
+        width: initial;
+        height: 87.328%;
+    }
+    .fog-3{
+        width: initial;
+        height: 49.888%;
+    }
+    .mountain-7{
+        width: initial;
+        height: 57.216%;
+    }
+    .mountain-6{
+        display: none;
+    }
+    .fog-4{
+        width: initial;
+        height: 59.68%;
+    }
+    .mountain-5{
+        width: initial;
+        height: 64.768%;
+    }
+    .fog-5{
+        width: initial;
+        height: 159.44%;
+    }
+    .mountain-4{
+        display: none;
+    }
+    .mountain-3{
+        width: initial;
+        height: 70.544%;
+        bottom: 0;
+    }
+    .fog-6{
+        width: initial;
+        height: 157.552%;
+    }
+    .mountain-2{
+        display: none;
+    }
+    .mountain-1{
+        width: initial;
+        height: 80%;
+    }
+    .sun-rays{
+        width: initial;
+        height: 66.096%;
+    }
+    .black-shadow{
+        width: initial;
+        height: 160%;
+    }
+    .vignette{
+        width: initial;
+        height: 160%;
+    }
+    .fog-1{
+        width: initial;
+        height: 178.76%;
+    }
 }
 
 @media screen and (max-width:1024px) {

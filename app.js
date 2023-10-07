@@ -7,6 +7,7 @@ yValue = 0;
 let rotateDegree = -0;
 parallax_el.forEach((el) => {
     el.style.transition = "0.45s cubic-bezier(0.2, 0.49, 0.32, 0.99)";
+    el.style.willChange = "transform";
 });
 
 function update(cursorPosition)
@@ -14,8 +15,21 @@ function update(cursorPosition)
 
 }
 update(0);
-window.addEventListener("mousemove", (e)=> {
-
+// Debounce function before your event listener
+function debounce(func, delay) {
+    let timeout;
+    return function () {
+    const context = this;
+    const args = arguments;
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+        func.apply(context, args);
+    }, delay);
+    };
+}
+  
+  window.addEventListener("mousemove", debounce((e) => {
+    // Your existing mousemove code here
     if(timeline.isActive()) return;
     xValue=e.clientX - window.innerWidth / 2;
     yValue=e.clientY - window.innerHeight / 2;
@@ -34,13 +48,15 @@ window.addEventListener("mousemove", (e)=> {
                 yValue * speedy}px))`;
         update(e.clientX);
     });
-    
-});
+  }, 25)); // 60 FPS, adjust as needed
+
+
 if(window.innerWidth >= 725){
     main.style.maxHeight= `${window.innerWidth * 0.6}px`;
 }
 else{
-    main.style.maxHeight= `${window.innerWidth * 1.6}px`;}
+    main.style.maxHeight= `${window.innerWidth * 1.6}px`;
+    }
 //GSAP library Animation
 
 let timeline = gsap.timeline();

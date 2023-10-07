@@ -41,7 +41,7 @@
     padding: 3rem;
     border-radius: 1rem;
     position: relative;
-    bottom: 9rem;
+    bottom: 6rem;
 }
 
 .aside__image{
@@ -139,11 +139,11 @@ input,textarea{
 /*==========================================MEDIA QUERIES PHONE=================================*/
 @media screen and (max-width: 600px) 
 {
-
     .contact__container{
         grid-template-columns: 1fr;
         gap: 3rem;
-        margin: 0;
+        margin-left: 0.7rem;
+        margin-right: 0.5rem;
         padding: 0;
         margin-bottom: 1rem;
     }

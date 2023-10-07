@@ -218,8 +218,8 @@ header{
     position: relative;
     top: 5rem;
     overflow: hidden;
-    height: 70vh;
     margin-bottom: 6rem;
+    padding: 4rem;
 }
 
 .header__container{
@@ -367,7 +367,7 @@ header h1:hover span::after {
 
 /*==============================Departments==============================*/
 .departments{
-    margin-top: 5rem;
+    margin-top: 10rem;
 }
 
 .departments__container{
@@ -397,6 +397,84 @@ header h1:hover span::after {
 .department_info p{
     margin: 1.2rem 0 2rem;
     font-size: 0.9rem;
+}
+
+/*========================= Constitution =========================*/
+
+.constitution{
+    background-color: var(--color-bg);
+    position: relative;
+    overflow: hidden;
+    padding: 1rem;
+    padding-bottom: 5rem;
+}
+.const__container{
+    display: grid;
+    align-items: center;
+    background-color: var(--color-bg1);
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+.const__left{
+    align-items: center;
+    padding: 10%;
+    padding-left: 5%;
+
+}
+.const__left p{
+    margin: 1rem 0 2.4rem;
+}
+.const_right-image{
+    align-items: center;
+    padding: 4rem;
+    top:25%;
+    width: 95%;
+    padding-left: 7rem;
+}
+.constitution h1{
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.constitution h1 span {
+    position: relative;
+}
+
+
+.constitution h1 span::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: -12%;
+    left: 0%;
+    background-color: var(--color-bg2);
+    width: 0;
+    height: 5px;
+    border-radius: 5px;
+    animation: animateline 500ms ease-out forwards 400ms;
+}
+
+.constitution h1::after {
+    content:"";
+    display: inline-block;
+    position: relative;
+    top: 10px;
+    background-image: url("../images/Synapse logo.png");
+    background-repeat: no-repeat;
+    background-size: 120% 120%;
+    width: 50px; 
+    height: 50px;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.constitution h1:hover::after {
+    opacity: 1;
+}
+
+.constitution:hover span::after {
+    width: 100%;
 }
 
 /*==============================FAQs==============================*/
@@ -667,7 +745,10 @@ nav button#close-menu-btn{
 .nav__menu li:nth-child(5){
     animation-delay: 500ms;
 }
-
+.nav__menu li:nth-child(6)
+{
+    animation-delay: 600ms;
+}
 
 @keyframes animateNavItems {
     0%{
@@ -686,7 +767,6 @@ nav button#close-menu-btn{
     height: 100%;
     display: grid;
     place-items: center;
-
 }
 
 .nav__menu li a:hover{
@@ -701,7 +781,7 @@ nav button#close-menu-btn{
 }
 .header__container{
     gap: 0;
-    padding-bottom: 3rem;
+    padding-bottom: 4rem;
 }
 
 /*========================================Goals========================================*/
@@ -731,7 +811,22 @@ nav button#close-menu-btn{
 .departments__container{
     grid-template-columns: 1fr 1fr;
 }
-/*==========================================FAQs==========================================*/
+/*==========================================Constitution==========================================*/
+
+.constitution{
+    height: 52vh;
+    margin-bottom: 4rem;
+}
+.const__container{
+    gap: 0;
+    padding-bottom: 4rem;
+}
+.constitution h1{
+    align-content: center;
+    padding-bottom: 1rem;
+}
+/*==========================================FAQ==========================================*/
+
 .faqs__container{
     grid-template-columns: 1fr;
 
@@ -739,17 +834,16 @@ nav button#close-menu-btn{
 .faq{
     padding: 1.5rem;
 }}
-/*==========================================Footer==========================================*/
+/*==========================================Media Queiries Phone==========================================*/
 @media screen and (max-width:600px) {
     .container{
         width: var(--container-width-sm);
     }
 .footer__container{
     grid-template-columns: 1fr 1fr;
-
 }
 
-/*==========================================Media Queries Phone==========================================*/
+/*==========================================Navmenu==========================================*/
 .nav__menu{
     right: 3%;
 }
@@ -765,7 +859,7 @@ nav button#close-menu-btn{
 .header__container{
     grid-template-columns: 1fr;
     text-align: center;
-    margin-top: 0rem;
+    margin-top: 3rem;
 }
 .header__left p{
     margin-bottom: 1.3rem;
@@ -775,6 +869,9 @@ nav button#close-menu-btn{
     display: none;
 }
 /*==========================================Goals==========================================*/
+.categories{
+    margin-top: 2rem;
+}
 .categories_left {
     display: flex;
     flex-direction: column;
@@ -816,6 +913,34 @@ nav button#close-menu-btn{
 
 .department p {
     text-align: justify;
+}
+
+
+/*==========================================Constitution==========================================*/
+.constitution{
+    height: 100vh;
+}
+.const__container{
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin-top: 2rem;
+}
+.const__left{
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+.const__left p{
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+.constitution h1{
+    align-content: center;
+    padding: 0.5rem;
+}
+.const__right {
+    display: none;
 }
 /*==========================================Testimonials==========================================*/
 .testimonial__body{
