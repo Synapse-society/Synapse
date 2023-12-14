@@ -64,3 +64,17 @@ categoryElements.forEach((el) => observer.observe(el));
 const departmentElements = document.querySelectorAll('.department');
 departmentElements.forEach((el) => observer.observe(el));
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Check if the animation should be applied based on user preference
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: no-preference)").matches;
+
+    // Get all elements with the 'department' class
+    const departmentElements = document.querySelectorAll('.department');
+
+    // Apply animation styles only if prefers-reduced-motion is true
+    if (prefersReducedMotion) {
+        // Apply the 'animate-once' class to the first department element
+        departmentElements[0].classList.add('animate-once');
+    }
+});

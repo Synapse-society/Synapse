@@ -14,8 +14,96 @@
     <link rel="stylesheet" href="./CSS/about.css">
     <style>
         .departments{
-            margin-top: 2rem;
+            margin-top: -1rem;
+            padding-top: -20%;
+            
         }
+        .header__container{
+        padding-top: -18rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 5rem;
+        height: 100%;
+        }
+        .header__right
+        {
+        padding-bottom: 6rem;
+        }
+
+        header{
+            margin-top: -1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 2rem;
+        }
+        section h2{
+        text-align: center;
+        margin-bottom: 3rem;
+        }
+
+        @media screen and (max-width:1024px) 
+        {
+        .container{
+        width: var(--container-width-md);
+        }
+    
+
+
+        h1 {
+            font-size: 2.2rem;
+            }
+
+        h2 {
+            font-size: 1.7rem;
+        }
+        .header{
+            height: 52vh;
+            margin-bottom: 4rem;
+            }
+        .header__container{
+            gap: 0;
+            padding-bottom: 4rem;
+            }
+        }
+        @media screen and (max-width:600px){
+        .header{
+            height: 100vh;
+        }
+        .header__container{
+            grid-template-columns: 1fr;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        .header__left p{
+            margin-bottom: 1.3rem;
+        }
+
+        .header__right {
+            display: none;
+        }}
+
+@media screen and (max-width:440px) {
+                header h1::after {
+                    display:none;
+                }
+
+                header h1 span::after {
+                    animation: animateline 1s ease-out forwards;
+                }
+
+                header p {
+                    text-align: justify;
+                }
+            }
+
+            @keyframes animateline {
+                0%{
+                    width: 0;
+                }
+                100%{
+                    width: 100%;
+                }
+            }
     </style>
     
 </head>
@@ -29,7 +117,7 @@
             <ul class="nav__menu">
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./about.html">About</a></li>
-                <li id="current_page"><a href="./departments.html">Departments</a></li>
+                <li id="current_page"><a href="./departments.html">Articles</a></li>
                 <li><a href="./Senate.html">Senate</a></li>
                 <li><a href="./events.html">Events</a></li>
                 <li><a href="./contact.html">Contact</a></li>
@@ -38,78 +126,68 @@
             <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
         </div>
     </nav>
-<!--================================End of Goals==========================================-->
+<!--================================Header==========================================-->
 
+<header>
+    <div class="container header__container">
+        <div class="header__left">
+                <h1><span>Blogs and Articles</span></h1>
+                <p>
+                    Welcome to the Blogs and Articles section of Synapse—a hub of insightful content and
+                    thought-provoking narratives. Dive into a diverse array of topics, from tech trends to 
+                    cultural explorations, crafted by experts and enthusiasts alike. Stay informed, inspired,
+                    and engaged with our dynamic collection that sparks curiosity and fuels knowledge.
+                </p>
+        </div>
+        <div class="header__right">
+            <div class="header_right-image">
+                <img src="images/online-learning-concept.svg" alt="">
+            </div>
+        </div>
+    </div>
+</header>
 
+<!--================================Articles==========================================-->
 
 <section class="departments">
-    <h2>Our Departments</h2>
+    <h3>Indo-Mosaic Finalists</h3>
     <div class="container departments__container">
         <article class="department">
             <div class="department_image">
-                <img src="images/language.png">
+                <img src="images/sagnik-indo.jpg">
             </div>
             <div class="department_info">
-            <h4>Panini Department of Linguistics</h4>
-            <p>Fosters a deeper understanding of the complex interplay between language and society,
-                ultimately contributing to more inclusive and equitable linguistic practices and policies.</p>
-            <a href="https://docs.google.com/document/d/1Z4_RKEz2FCRWb4QxXvlntvC4gPIy4u3WpfrRFIQw3W0/edit?usp=drivesdk" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Learn More</a></div>
+            <h4>WEST BENGAL</h4>
+            <p>The winner of the event <b>Sagnik Chakraborty</b> unfolds a narrative of rich history, diverse geography, and unparalleled cultural prowess of West Bengal. 
+                From ancient civilizations to pivotal roles in the freedom struggle, its strategic location and varied climate have significantly shaped its flourishing legacy and
+            how it stands as a testament to unparalleled achievements and contributions in the tapestry of India's heritage.</p>
+            <a href="https://docs.google.com/document/d/1iWetXZISp5oIzhqHDuwxEEjvZve9sBzH2P6wbbnTfL4/edit?usp=sharing" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Learn More</a></div>
         </article>
 
         <article class="department">
             <div class="department_image">
-                <img src="images/Culture.jpg">
+                <img src="images/agamani-indo.jpg">
             </div>
             <div class="department_info">
-            <h4>Kumarila Bhatta Department of Culture</h4>
-            <p>Fosters a deeper understanding of the complex interplay between language and society,
-                ultimately contributing to more inclusive and equitable linguistic practices and policies.</p>
-            <a href="https://docs.google.com/document/d/1liEjTTGBs6oVeW6SPaDxPDLeRbj-HmGxbZFWg5L06fs/edit?usp=drivesdk" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Learn More</a></div>
+            <h4>WEST BENGAL</h4>
+            <p> <b>Agamani Paul</b> - our runner up for the event wrote a captivating article which explores the rich tapestry of West Bengal, delving into its history, cultural luminaries, intellectual prowess, and delectable cuisine.
+                From the origin of iconic sweets like "Rosogolla" to the cultural vibrancy of its music and arts scene, the article offers a vivid portrayal of the state's unique charm and heritage.
+                How West Bengal's legacy is a tapestry of unparalleled achievements.</p>
+            <a href="https://docs.google.com/document/d/1fnBCdMEWbqL_wFSU7hM1Wj3nvWOjV4XTKjHgHHrCWVw/edit?usp=sharing" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Learn More</a></div>
         </article>
 
         <article class="department">
             <div class="department_image">
-                <img src="images/History.jpg">
+                <img src="images/umesh-indo.jpg">
             </div>
             <div class="department_info">
-            <h4>Kalhana Department of History</h4>
-            <p>Fosters a deeper understanding of the complex interplay between language and society,
-                ultimately contributing to more inclusive and equitable linguistic practices and policies.</p>
-            <a href="https://docs.google.com/document/d/1GJcy9a6i7hyLXSAlxT9UpoXcMWMaVJEBjwL3sBXaaa8/edit?usp=drivesdk" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Learn More</a></div>
+            <h4>Tamil Nadu</h4>
+            <p><b> P UMESH KANNAN </b> - our second runner up for the event described in his immensely detailed article 
+                Tamil Nadu, a cradle of Dravidian culture, boasts a heritage shaped by Chera, Chola, Pandya dynasties, and Vijayanagara Empire. 
+                Renowned for classical Tamil literature, it's a treasure trove of art, including Bharatanatyam. Its grand temples and UNESCO sites 
+                reflect a rich historical tapestry, while traditional cuisine and silk sarees add cultural vibrancy.</p>
+            <a href="https://docs.google.com/document/d/1g30MKOaTvVMWIUUIDh4K9PhxZCsA7Thk/edit?usp=sharing&ouid=109596166536560443387&rtpof=true&sd=true" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Learn More</a></div>
         </article>
-
-        <article class="department">
-            <div class="department_image">
-                <img src="images/Geography.png">
-            </div>
-            <div class="department_info">
-            <h4>Strabo Department of Geography</h4>
-            <p>Fosters a deeper understanding of the complex interplay between language and society,
-                ultimately contributing to more inclusive and equitable linguistic practices and policies.</p>
-            <a href="https://docs.google.com/document/d/1Ut7EYAqHkovh-_vd_BVfQf8z3UZlF4p9ra3zKw4Q6FE/edit?usp=drivesdk" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Learn More</a></div>
-        </article>
-
-        <article class="department">
-            <div class="department_image">
-                <img src="images/Political Sience.jpeg">
-            </div>
-            <div class="department_info">
-            <h4>Chanakya Department of Political Studies</h4>
-            <p>Fosters a deeper understanding of the complex interplay between language and society,
-                ultimately contributing to more inclusive and equitable linguistic practices and policies.</p>
-            <a href="https://docs.google.com/document/d/1aCEGqd7rHyhNBcQKIIdZVQCZvJ59I2NiWGOIDpc8a1w/edit?usp=drivesdk" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Learn More</a></div>
-        </article>
-
-        <article class="department">
-            <div class="department_image">
-                <img src="images/Philosophy.jpg">
-            </div>
-            <div class="department_info">
-            <h4>Aristotle Department of Philosophy</h4>
-            <p>Fosters a deeper understanding of the complex interplay between language and society,
-                ultimately contributing to more inclusive and equitable linguistic practices and policies.</p>
-            <a href="https://docs.google.com/document/d/1DgZcgqrJrh60mhHZtIi4NDXF20MGeRBUCU9vT6n8Vpg/edit?usp=drivesdk" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Learn More</a></div>
-        </article> 
     </div>
 </section>
 <!--================================End of Departments==========================================-->
@@ -128,7 +206,7 @@
                     target="_blank" rel="noopener noreferrer">Join Synapse</a></li>
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./about.html">About</a></li>
-                <li><a href="./departments.html">Departments</a></li>
+                <li><a href="./departments.html">Articles</a></li>
                 <li><a href="./events.html">Events</a></li>
                 <li><a href="./Senate.html">Senate</a></li>
                 <li><a href="./contact.html">Contact</a></li>
